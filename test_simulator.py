@@ -31,4 +31,4 @@ result2 = simulator.run_experiment(
 for key, value in result2.items():
     print(f"  {key}: {value:.2f}")
 
-print("\n✅ Simulator working correctly!")
+print("\n Simulator working correctly!")

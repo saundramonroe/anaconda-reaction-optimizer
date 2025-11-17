@@ -48,7 +48,7 @@ class ReactionOptimizerApp:
         )
 
         self.optimize_button = pn.widgets.Button(
-            name='🚀 Run Optimization',
+            name='Run Optimization',
             button_type='primary',
             width=280,
             height=50
@@ -81,7 +81,7 @@ class ReactionOptimizerApp:
         )
 
         self.run_experiment_button = pn.widgets.Button(
-            name='🧪 Run Single Experiment',
+            name=' Run Single Experiment',
             button_type='success',
             width=280,
             height=50
@@ -90,7 +90,7 @@ class ReactionOptimizerApp:
 
         # Results display
         self.results_pane = pn.pane.Markdown(
-            "## 👋 Welcome!\n\nChoose 'Bayesian Optimization' tab to run automated optimization,\nor 'Manual Experiments' to test individual conditions.",
+            "##  Welcome!\n\nChoose 'Bayesian Optimization' tab to run automated optimization,\nor 'Manual Experiments' to test individual conditions.",
             styles={'background-color': '#f8f9fa', 'padding': '20px', 'border-radius': '5px'}
         )
         self.plot_pane = pn.pane.Plotly(height=700)
@@ -102,7 +102,7 @@ class ReactionOptimizerApp:
 
     def _run_optimization(self, event):
         """Run Bayesian optimization"""
-        self.results_pane.object = "## 🔄 Optimization running...\n\nThis may take 30-60 seconds depending on the number of evaluations."
+        self.results_pane.object = "## Optimization running...\n\nThis may take 30-60 seconds depending on the number of evaluations."
         pn.io.notifications.info("Starting optimization...", duration=3000)
 
         # Create optimizer
@@ -136,7 +136,7 @@ class ReactionOptimizerApp:
         )
 
         result_md = f"""
-        ## 🧪 Single Experiment Results
+        ##  Single Experiment Results
 
         ### Parameters:
         | Parameter | Value |
@@ -149,14 +149,14 @@ class ReactionOptimizerApp:
         ### Results:
         | Metric | Value |
         |--------|-------|
-        | ✅ **Yield** | **{results['yield']:.2f}%** |
-        | 🎯 Selectivity | {results['selectivity']:.2f}% |
-        | 💰 Cost | {results['cost']:.0f} units |
-        | 📈 ROI | {results['roi']:.2f} |
+        |  **Yield** | **{results['yield']:.2f}%** |
+        |  Selectivity | {results['selectivity']:.2f}% |
+        |  Cost | {results['cost']:.0f} units |
+        |  ROI | {results['roi']:.2f} |
 
         ---
 
-        💡 **Tip**: Try adjusting parameters to see how they affect the yield!
+         **Tip**: Try adjusting parameters to see how they affect the yield!
         """
 
         self.results_pane.object = result_md
@@ -169,34 +169,34 @@ class ReactionOptimizerApp:
         improvement = results['improvement']
 
         result_md = f"""
-        ## 🎉 Optimization Complete!
+        ##  Optimization Complete!
 
         ### Optimal Parameters Found:
         | Parameter | Value |
         |-----------|-------|
-        | 🌡️ Temperature | **{opt_params['temperature']:.1f} °C** |
-        | ⚡ Pressure | **{opt_params['pressure']:.1f} Bar** |
-        | ⚗️ Catalyst | **{opt_params['catalyst_conc']:.2f} mol%** |
-        | ⏱️ Time | **{opt_params['reaction_time']:.1f} hrs** |
+        |  Temperature | **{opt_params['temperature']:.1f} °C** |
+        |  Pressure | **{opt_params['pressure']:.1f} Bar** |
+        |  Catalyst | **{opt_params['catalyst_conc']:.2f} mol%** |
+        |  Time | **{opt_params['reaction_time']:.1f} hrs** |
 
         ### Performance Metrics:
         | Metric | Value |
         |--------|-------|
-        | ✅ **Yield** | **{opt_results['yield']:.2f}%** |
-        | 🎯 Selectivity | {opt_results['selectivity']:.2f}% |
-        | 💰 Cost | {opt_results['cost']:.0f} units |
-        | 📈 ROI | {opt_results['roi']:.2f} |
+        |  **Yield** | **{opt_results['yield']:.2f}%** |
+        |  Selectivity | {opt_results['selectivity']:.2f}% |
+        |  Cost | {opt_results['cost']:.0f} units |
+        |  ROI | {opt_results['roi']:.2f} |
 
         ### Improvement:
         **{improvement:.1f}%** improvement vs random search
 
         ---
 
-        💡 **Value Proposition**: This optimization reduced experimental cycles from
+        **Value Proposition**: This optimization reduced experimental cycles from
         potentially **thousands** to just **{results['n_evaluations']} evaluations**, saving
         **weeks of lab time** and **significant resources**.
 
-        🔍 Check out the visualizations below to see how the algorithm explored the parameter space!
+        Check out the visualizations below to see how the algorithm explored the parameter space!
         """
 
         self.results_pane.object = result_md
@@ -363,11 +363,11 @@ class ReactionOptimizerApp:
 
         # Header
         header = pn.pane.Markdown("""
-        # 🧪 Chemical Reaction Optimizer
+        # Chemical Reaction Optimizer
         ## Powered by Anaconda Enterprise Python Stack
 
         This demo showcases **Bayesian optimization** for chemical reaction conditions,
-        directly addressing **Wanhua Chemical's** use case of *"rapidly determining optimal
+        directly addressing **Chemcial Organization's** use case of *"rapidly determining optimal
         conditions from thousands of experimental combinations."*
         """, styles={'background': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
                      'color': 'white', 'padding': '30px', 'border-radius': '10px',
@@ -375,15 +375,15 @@ class ReactionOptimizerApp:
 
         # Value propositions
         value_props = pn.pane.Markdown("""
-        ### 🚀 Why Anaconda Adds Value:
+        ###  Why Anaconda Adds Value:
 
         | Feature | Benefit |
         |---------|---------|
-        | 📦 **Package Management** | One-click environment reproduction across Yantai, Ningbo, Hungary |
-        | 🔒 **Supply Chain Security** | Verified scientific packages (RDKit, scikit-optimize, scipy) |
-        | 🤝 **Collaboration** | Share notebooks & environments globally with confidence |
-        | ⚡ **Performance** | Optimized builds of NumPy, SciPy for faster computation |
-        | 🎯 **Governance** | Control which packages your R&D teams can access |
+        |  **Package Management** | One-click environment reproduction across Yantai, Ningbo, Hungary |
+        |  **Supply Chain Security** | Verified scientific packages (RDKit, scikit-optimize, scipy) |
+        |  **Collaboration** | Share notebooks & environments globally with confidence |
+        |  **Performance** | Optimized builds of NumPy, SciPy for faster computation |
+        |  **Governance** | Control which packages your R&D teams can access |
         """, styles={'background-color': '#f0f8ff', 'padding': '20px',
                      'border-radius': '8px', 'border-left': '5px solid #667eea'})
 
@@ -405,15 +405,15 @@ class ReactionOptimizerApp:
                     width=600
                 )
             ),
-            pn.pane.Markdown("## 📊 Visualization", styles={'color': '#667eea', 'margin-top': '20px'}),
+            pn.pane.Markdown("##  Visualization", styles={'color': '#667eea', 'margin-top': '20px'}),
             self.plot_pane,
-            pn.pane.Markdown("## 📋 Experiment History", styles={'color': '#667eea'}),
+            pn.pane.Markdown("##  Experiment History", styles={'color': '#667eea'}),
             self.history_table
         )
 
         manual_tab = pn.Column(
             pn.pane.Markdown("""
-            ## 🔬 Manual Experimentation
+            ##  Manual Experimentation
 
             Use the sliders below to set reaction conditions and run individual experiments.
             This is useful for:
@@ -446,24 +446,24 @@ class ReactionOptimizerApp:
         This interactive application demonstrates how **Anaconda** enables enterprise-scale
         scientific computing for chemical R&D.
 
-        ### 🎯 Technical Implementation
+        ###  Technical Implementation
 
         - **Bayesian Optimization**: Using Gaussian Processes to efficiently search parameter space
         - **Chemical Simulation**: Realistic reaction modeling with temperature, pressure, catalyst effects
         - **Interactive Visualization**: Real-time 3D plotting and progress tracking
         - **Reproducible Environments**: Single YAML file ensures consistency across global teams
 
-        ### 💰 Business Value for Wanhua Chemical
+        ###  Business Value for Chemical Organizations
 
         | Metric | Value |
         |--------|-------|
         | **Experimental Reduction** | 90%+ fewer physical experiments needed |
         | **Time Savings** | Weeks → Days for reaction optimization |
         | **Cost Savings** | Minimize expensive lab time and materials |
-        | **Global Consistency** | Same environment in Yantai, Ningbo, Hungary, Europe |
+        | **Global Consistency** | Same environment in across the globe |
         | **Knowledge Retention** | Reproducible workflows preserve institutional IP |
 
-        ### 🛠️ Technologies Used
+        ###  Technologies Used
 ```python
         # Core scientific stack
         - Python 3.11
@@ -484,23 +484,23 @@ class ReactionOptimizerApp:
         - Matplotlib 3.8
 ```
 
-        ### 📚 Mapping to Wanhua's Stated Needs
+        ###  Mapping to Chemcial Organizations Stated Needs
 
-        > "Wanhua is actively exploring and promoting the application of AI and big data
+        > "Chemical Organizations are actively exploring and promoting the application of AI and big data
         > algorithms in its processes, especially in **molecular discovery and reaction optimization**"
 
         This demo directly addresses:
 
-        1. ✅ **Reaction Optimization**: Bayesian methods for parameter tuning
-        2. ✅ **Reduced Experimental Cycles**: From 1000s to 50 evaluations
-        3. ✅ **AI-Enabled R&D**: Machine learning for chemical processes
-        4. ✅ **Global Collaboration**: Reproducible environments across sites
-        5. ✅ **Supply Chain Security**: Verified package sources
+        1.  **Reaction Optimization**: Bayesian methods for parameter tuning
+        2.  **Reduced Experimental Cycles**: From 1000s to 50 evaluations
+        3.  **AI-Enabled R&D**: Machine learning for chemical processes
+        4.  **Global Collaboration**: Reproducible environments across sites
+        5.  **Supply Chain Security**: Verified package sources
 
-        ### 🚀 Next Steps
+        ###  Next Steps
 
         1. **Pilot Project**: Apply to real MDI reaction data from Wanhua's labs
-        2. **Integration**: Connect to existing Huawei Cloud ModelArts platform
+        2. **Integration**: Connect to existing Cloud provider platform
         3. **Scaling**: Deploy Anaconda Enterprise for team-wide access
         4. **Training**: Enable R&D scientists with best practices
         5. **Governance**: Establish package approval workflows
@@ -513,9 +513,9 @@ class ReactionOptimizerApp:
         """, styles={'padding': '20px'})
 
         tabs = pn.Tabs(
-            ('🎯 Bayesian Optimization', opt_tab),
-            ('🔬 Manual Experiments', manual_tab),
-            ('📖 About', about_tab),
+            (' Bayesian Optimization', opt_tab),
+            (' Manual Experiments', manual_tab),
+            (' About', about_tab),
             dynamic=True
         )
 
