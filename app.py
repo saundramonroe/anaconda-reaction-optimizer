@@ -819,7 +819,7 @@ Test specific reaction conditions to understand how parameters affect outcomes.
 ##  Purpose
 
 This interactive application demonstrates **Anaconda's enterprise value** for
-Wanhua Chemical's AI-enabled R&D initiatives, specifically addressing the stated use case:
+Chemical Organization's AI-enabled R&D initiatives, specifically addressing the stated use case:
 
 > *"Bayesian algorithms for reaction optimization that rapidly determine optimal
 > conditions from thousands of experimental combinations"*
@@ -846,7 +846,7 @@ The simulator uses realistic chemical engineering principles:
 
 ---
 
-## 💼 Business Value Quantified
+## Business Value Quantified
 
 | Metric | Traditional | With Bayesian | Savings |
 |--------|-------------|---------------|---------|
@@ -890,7 +890,7 @@ Panel 1.3               # Web dashboards
 Matplotlib 3.8          # Static plots
 ```
 
-**All managed through Anaconda's enterprise package management system.**
+**All managed through Anaconda's Core package management system.**
 
 ---
 
@@ -916,9 +916,9 @@ Matplotlib 3.8          # Static plots
 
 ---
 
-**Built with ❤️ using Anaconda Distribution**
+**Built with the power of Anaconda Distribution**
 
-© 2024 Your Company. All Rights Reserved.
+© 2025 Anaconda, Inc. All Rights Reserved.
 """,
             styles={'padding': '30px', 'line-height': '1.6'}
         )
