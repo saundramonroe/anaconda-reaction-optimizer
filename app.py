@@ -8,7 +8,7 @@ Instead of running thousands of trial-and-error experiments over months,
 the algorithm uses machine learning to smart-search the parameter space in just 30-100 experiments,
 reducing a 3-12 month process to 1-4 weeks and saving $475K-$950K in lab costs per optimization project.
 
-The demo directly showcases Anaconda's platform value for chemical organizations by proving
+The demo directly showcases Anaconda's Platform value for chemical organizations by proving
 that complex AI-enabled workflows can be deployed consistently across global R&D sites
 using reproducible conda environments. Every site gets the exact same verified packages
 (scikit-optimize, NumPy, Plotly, RDKit) with no "works on my machine" issues,
