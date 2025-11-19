@@ -818,7 +818,7 @@ Test specific reaction conditions to understand how parameters affect outcomes.
 
 ##  Purpose
 
-This interactive application demonstrates **Anaconda's enterprise value** for
+This interactive application demonstrates **Anaconda's Platform value** for
 Chemical Organization's AI-enabled R&D initiatives, specifically addressing the stated use case:
 
 > *"Bayesian algorithms for reaction optimization that rapidly determine optimal
