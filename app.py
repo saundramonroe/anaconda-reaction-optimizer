@@ -718,7 +718,7 @@ Demonstrating intelligent parameter search for chemical reactions using
         # ============================================================
         opt_tab = pn.Column(
             pn.pane.Markdown(
-                "## ⚙️ Configuration",
+                "## Configuration",
                 styles={'color': '#667eea', 'font-size': '1.3em'}
             ),
             pn.Row(
